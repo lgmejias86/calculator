@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/basic.css">
+        <link rel="stylesheet" href="js/dijit/themes/claro/claro.css">
+        <script>dojoConfig = {parseOnLoad: true, async: true}</script>
+        <script src="js/dojo/dojo.js"></script>
+        <script>
+            require(["myApp/buttons", "dojo/dom","dojo/domReady!"], function(buttons, dom){
+                var buttonsContainer = dom.byId("buttonsContainer");
+                buttons.createButton(buttonsContainer);
+            });
+        </script>
+    </head>
+    <body id="claro">
+    	<div id="container">
+    		<h1>FreeCodeCamp Calculator</h1>
+            <div id="containerCalc">
+        		<div id="screenCalcContainer">
+        			<div id="screenCalc"></div>
+        		</div>
+        		<div id="buttonsContainer">
+
+        		</div>
+            </div>
+    	</div>
+    </body>
+</html>
