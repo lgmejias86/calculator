@@ -7,9 +7,12 @@
         <script>dojoConfig = {parseOnLoad: true, async: true}</script>
         <script src="js/dojo/dojo.js"></script>
         <script>
-            require(["myApp/buttons", "dojo/dom","dojo/domReady!"], function(buttons, dom){
+            require(["myApp/buttons", "dojo/dom", "myApp/event","dojo/domReady!"], 
+                function(buttons, dom, event){
                 var buttonsContainer = dom.byId("buttonsContainer");
                 buttons.createButton(buttonsContainer);
+
+                event.createEvents();
             });
         </script>
     </head>

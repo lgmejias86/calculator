@@ -1,5 +1,5 @@
-define(["dojo/dom-construct", "dijit/form/Button", "dojo/domReady!"],
-    function(domConstruct, Button){
+define(["dojo/dom-construct", "./event", "dojo/domReady!"],
+    function(domConstruct, event){
        	return{
 	        createButton: function(parent){
 
@@ -11,13 +11,8 @@ define(["dojo/dom-construct", "dijit/form/Button", "dojo/domReady!"],
                 {id: "answer", text: "="}];
 
                 for (var i = 0; i < arrayButtons.length; i++) {
-                    var input = domConstruct.create("button", {id: arrayButtons[i].id, innerHTML: ""}, parent);
-                
-                    var button = new Button({
-                        label: arrayButtons[i].text,
-                    }, input);
-                    button.startup();
-                    };
+                    var input = domConstruct.create("button", {id: arrayButtons[i].id, innerHTML: arrayButtons[i].text, className: "buttons"}, parent);
+                };
 		    }
         }
 });
